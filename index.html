@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusRooming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════ -->
+  <header>
+
+    <!-- TOP NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo">
+          <div class="logo-badge">CR</div>
+          <span class="logo-text">CAMPUS<span class="logo-accent">ROOMING</span></span>
+        </a>
+
+        <!-- Location -->
+        <div class="nav-location" id="locationWrapper">
+          <button class="location-btn" id="locationBtn">
+            <span class="location-label">Deliver to</span>
+            <span class="location-city" id="locationCity">
+              📍 Indore ▾
+            </span>
+          </button>
+          <ul class="location-dropdown" id="locationDropdown">
+            <li data-city="Bhopal">📍 Indore</li>
+            <li data-city="Indore">📍 Bhopal</li>
+            <li data-city="Jabalpur">📍 Jabalpur</li>
+            <li data-city="Gwalior">📍 Gwalior</li>
+            <li data-city="Ujjain">📍 Ujjain</li>
+          </ul>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="nav-search">
+          <select class="search-select" id="searchSelect">
+            <option value="All">All</option>
+            <option value="PG/Hostel">PG/Hostel</option>
+            <option value="Rented Room">Rented Room</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Roommates">Roommates</option>
+          </select>
+          <input class="search-input" id="searchInput" placeholder="Search rooms near college campus..." />
+          <button class="search-btn" id="searchBtn">🔍</button>
+        </div>
+
+        <!-- Auth Buttons -->
+        <div class="nav-auth">
+          <a href="sign-in.html" class="btn btn-outline">Sign in</a>
+          <a href="register.html" class="btn btn-orange">Get started</a>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger">☰</button>
+
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="sign-in.html" class="btn btn-outline btn-full">Sign in</a>
+        <a href="register.html" class="btn btn-orange btn-full">Get started</a>
+      </div>
+    </nav>
+
+    <!-- PANEL BAR -->
+    <div class="panel">
+      <div class="panel-inner">
+
+        <!-- All Mega Dropdown -->
+        <div class="panel-all-wrapper" id="allWrapper">
+          <button class="panel-all-btn" id="allBtn">☰ All ▾</button>
+
+          <div class="panel-dropdown" id="allDropdown">
+
+            <!-- Categories -->
+            <div class="dropdown-section dropdown-dark">
+              <p class="dropdown-label">Browse by Category</p>
+              <div class="dropdown-categories">
+                <button class="dropdown-cat" data-cat="PG/Hostel">
+                  <span class="cat-icon">🏠</span>
+                  <div>
+                    <strong>PG / Hostel</strong>
+                    <small>Paying guest &amp; hostel rooms</small>
+                  </div>
+                </button>
+                <button class="dropdown-cat" data-cat="Rented Room">
+                  <span class="cat-icon">🚪</span>
+                  <div>
+                    <strong>Rented Room</strong>
+                    <small>Single &amp; shared rentals</small>
+                  </div>
+                </button>
+                <button class="dropdown-cat" data-cat="Apartment">
+                  <span class="cat-icon">🏢</span>
+                  <div>
+                    <strong>Apartment</strong>
+                    <small>Full flats near campus</small>
+                  </div>
+                </button>
+                <button class="dropdown-cat" data-cat="Roommates">
+                  <span class="cat-icon">👥</span>
+                  <div>
+                    <strong>Roommates</strong>
+                    <small>Find your perfect match</small>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Amenities -->
+            <div class="dropdown-section">
+              <p class="dropdown-label-dark">Filter by Amenity</p>
+              <div class="dropdown-amenities">
+                <button class="amenity-chip">📶 Wi-Fi Included</button>
+                <button class="amenity-chip">🚗 Parking</button>
+                <button class="amenity-chip">☕ Meals Included</button>
+                <button class="amenity-chip">🛡 Security</button>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="dropdown-section">
+              <p class="dropdown-label-dark">Quick Links</p>
+              <div class="dropdown-links">
+                <button class="quick-link"><span>⭐</span><div><strong>Today's Deals</strong><small>Best offers near you</small></div></button>
+                <button class="quick-link"><span>🕐</span><div><strong>Recently Added</strong><small>New listings this week</small></div></button>
+                <button class="quick-link"><span>🎧</span><div><strong>Customer Service</strong><small>We're here to help</small></div></button>
+                <button class="quick-link"><span>🏷</span><div><strong>Offers &amp; Discounts</strong><small>Save on your next room</small></div></button>
+                <button class="quick-link"><span>❓</span><div><strong>FAQs</strong><small>Common questions</small></div></button>
+                <button class="quick-link"><span>📝</span><div><strong>List Your Property</strong><small>Become a host</small></div></button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Panel Quick Links -->
+        <div class="panel-links">
+          <button class="panel-link">Today's Deals</button>
+          <button class="panel-link">Customer Service</button>
+          <button class="panel-link">New Listings</button>
+          <button class="panel-link">List Property</button>
+          <button class="panel-link">FAQs</button>
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Issue 01 · For Students, By Students</p>
+      <h1 class="hero-h1">A room of one's own,</h1>
+      <h2 class="hero-h2">found gently.</h2>
+      <p class="hero-desc">
+        Browse hand-picked PGs, apartments and roommate matches near your campus.
+        No spammy listings — just real homes from real hosts.
+      </p>
+      <div class="hero-cta">
+        <a href="register.html" class="btn btn-orange">Find your room →</a>
+        <button class="btn btn-ghost">List your property</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       LISTINGS
+  ══════════════════════════════════════════ -->
+  <section class="listings-section" id="listings">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">Featured Listings</p>
+          <h3 class="section-title">Rooms near your campus</h3>
+        </div>
+        <button class="btn-text">View all →</button>
+      </div>
+
+      <div class="listings-grid" id="listingsGrid">
+        <!-- Cards injected by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       WHY CAMPUSROOMING
+  ══════════════════════════════════════════ -->
+  <section class="features-section">
+    <div class="section-inner">
+      <p class="section-eyebrow center">Why us</p>
+      <h3 class="section-title center">Built for students who deserve better</h3>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h4>Verified Listings</h4>
+          <p>Every room is physically verified by our campus ambassadors before going live.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h4>Instant Connect</h4>
+          <p>Chat directly with hosts — no middlemen, no spam, no delays.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">❤️</div>
+          <h4>For Students, By Students</h4>
+          <p>Built by people who know what it's like to find a room before semester starts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       HOW IT WORKS
+  ══════════════════════════════════════════ -->
+  <section class="steps-section">
+    <div class="section-inner">
+      <p class="section-eyebrow center gold">How it works</p>
+      <h3 class="section-title center light">Find your room in 3 steps</h3>
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <div>
+            <h4>Browse listings</h4>
+            <p>Search by college, budget, and room type.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <div>
+            <h4>Connect with host</h4>
+            <p>Chat directly — no agents, no fees.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <div>
+            <h4>Move in</h4>
+            <p>Sign the agreement and settle in.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════ -->
+  <section class="testimonials-section">
+    <div class="section-inner">
+      <p class="section-eyebrow center">Student voices</p>
+      <h3 class="section-title center">What our students say</h3>
+      <div class="testimonial-wrapper">
+        <div class="testimonial-card" id="testimonialCard">
+          <div class="stars" id="testimonialStars"></div>
+          <p class="testimonial-text" id="testimonialText"></p>
+          <p class="testimonial-name" id="testimonialName"></p>
+          <p class="testimonial-college" id="testimonialCollege"></p>
+        </div>
+        <div class="testimonial-controls">
+          <button class="t-btn" id="prevTestimonial">‹</button>
+          <div class="t-dots" id="tDots"></div>
+          <button class="t-btn" id="nextTestimonial">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CTA BANNER
+  ══════════════════════════════════════════ -->
+  <section class="cta-section">
+    <div class="section-inner center">
+      <h3 class="cta-title">Ready to find your room?</h3>
+      <p class="cta-desc">Join thousands of students who found their perfect campus home.</p>
+      <div class="cta-btns">
+        <a href="register.html" class="btn btn-yellow">Create free account</a>
+        <button class="btn btn-ghost">List your property</button>
+      </div>
+      <div class="cta-perks">
+        <span>✅ No registration fee</span>
+        <span>✅ Verified listings only</span>
+        <span>✅ Direct host contact</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2025 CampusRooming · For Students, By Students · Indore </p>
+      <div class="footer-links">
+        <button>Privacy</button>
+        <button>Terms</button>
+        <button>Contact</button>
+        <button>Sitemap</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
